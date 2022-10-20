@@ -5,10 +5,8 @@ import java.awt.*;
 
 public class Form extends JFrame {
     public JFrame myFrame=new JFrame("FruitSema"); //静态的窗口容器
-    public JPanel myPanel1=new JPanel();
     public JPanel myPanel2=new JPanel();
     public Container myContainer=myFrame.getContentPane();
-    public static JTextArea myTextArea=new JTextArea();      //静态的多行文本框
     public JScrollPane myScroll=new JScrollPane();
     public Graphics g=myPanel2.getGraphics();
 
@@ -55,37 +53,19 @@ public class Form extends JFrame {
     }
 
 
-    public static void putFruit(String name,String fruit){
-        myTextArea.append(name+"放了一个"+fruit+"\n");
-    }
-    public static void eatFruit(String name,String fruit){
-        myTextArea.append(name+"吃了一个"+fruit+"\n");
-    }
-
-    public static void putFruitFailed(String name,String fruit){
-        myTextArea.append(name+"放"+fruit+"失败"+"\n");
-    }
-
-    public static void eatFruitFailed(String name,String fruit){
-        myTextArea.append(name+"吃"+fruit+"失败"+"\n");
-    }
-
-
     public void Init(){
         myFrame.setLayout(null);
-        myPanel1.setLayout(null);
         myPanel2.setLayout(null);
         myContainer.setLayout(null);
 
         myFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        myFrame.setSize(1200,800);
-        myPanel1.setBounds(0,0,210,800);
-        myPanel2.setBounds(210,0,990,800);
-        fatherLabel.setBounds(20,5,father.getIconWidth(),father.getIconHeight());
-        motherLabel.setBounds(850,5,mother.getIconWidth(),mother.getIconHeight());
-        sonLabel.setBounds(20,645,son.getIconWidth(),son.getIconHeight());
-        daughterLabel.setBounds(850,645,daughter.getIconWidth(),daughter.getIconHeight());
+        myFrame.setSize(1000,800);
+        myPanel2.setBounds(0,0,1200,800);
+        fatherLabel.setBounds(0,0,father.getIconWidth(),father.getIconHeight());
+        motherLabel.setBounds(850,0,mother.getIconWidth(),mother.getIconHeight());
+        sonLabel.setBounds(20,800-son.getIconHeight(),son.getIconWidth(),son.getIconHeight());
+        daughterLabel.setBounds(850,800-daughter.getIconHeight(),daughter.getIconWidth(),daughter.getIconHeight());
         plateLabel.setBounds(375,325,plate.getIconWidth(),plate.getIconHeight());
         fHandLabel.setBounds(100,20,motherHand.getIconWidth(),motherHand.getIconHeight());
         mHandLabel.setBounds(800,20,motherHand.getIconWidth(),motherHand.getIconHeight());
@@ -100,10 +80,8 @@ public class Form extends JFrame {
         bananaLabel3.setBounds(375,300,banana.getIconWidth(),banana.getIconHeight());
         bananaLabel4.setBounds(425,300,banana.getIconWidth(),banana.getIconHeight());
 
-        myTextArea.add(myScroll);
-        myPanel1.add(myTextArea);
-        myPanel2.add(fatherLabel);
         myPanel2.add(motherLabel);
+        myPanel2.add(fatherLabel);
         myPanel2.add(sonLabel);
         myPanel2.add(daughterLabel);
         myPanel2.add(plateLabel);
@@ -120,11 +98,8 @@ public class Form extends JFrame {
         myPanel2.add(bananaLabel3);
         myPanel2.add(bananaLabel4);
 
-        myContainer.add(myPanel1);
         myContainer.add(myPanel2);
         myFrame.add(myScroll);
-
-        myTextArea.setBounds(20,20,180,710);
 
         myFrame.setVisible(true);
         myScroll.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);

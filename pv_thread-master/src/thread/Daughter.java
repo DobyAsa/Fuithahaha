@@ -10,7 +10,6 @@ public class Daughter extends TimerTask {
                 if(App.haveApple.tryAcquire()){
                     App.appleCount--;
                     move();
-                    Form.eatFruit("女儿","苹果");
 
                     App.diskEmpty.release();
                 }

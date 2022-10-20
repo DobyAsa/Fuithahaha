@@ -10,7 +10,6 @@ public class Son extends TimerTask {
                 if(App.haveOrange.tryAcquire()){
                     App.orangeCount--;
                     move();
-                    Form.eatFruit("儿子","橘子");
                     App.diskEmpty.release();
                 }
                 Thread.sleep(1000);

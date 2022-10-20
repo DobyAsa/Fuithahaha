@@ -16,7 +16,6 @@ public class Father extends TimerTask {
 
                     move();
 
-                    Form.putFruit("爸爸","香蕉");
                     System.out.println("爸爸放了一个香蕉");
 
                     int c = App.mContinue.availablePermits();

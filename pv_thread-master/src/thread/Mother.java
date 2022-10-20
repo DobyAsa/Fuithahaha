@@ -13,7 +13,6 @@ public class Mother extends TimerTask {
 //                    Thread.sleep(1000);
 
                     move();
-                    Form.putFruit("妈妈","草莓");
                     System.out.println("妈妈放了一个草莓");
 
                     int c = App.fContinue.availablePermits();
