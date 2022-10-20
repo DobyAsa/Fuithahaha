@@ -4,54 +4,61 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 public class Father extends TimerTask {
-    Timer timer=new Timer(true);
 
     @Override
     public void run() {
         try {
             while (true) {
                 if(App.diskEmpty.tryAcquire()){
-                    App.mute.acquire();
+                    App.fContinue.acquire();
+                    App.diskMutex.acquire();
 //                    Thread.sleep(1000);
 
-                    int x1=Form.getX(Form.orangeLabel1);
-                    int y1=Form.getY(Form.orangeLabel1);
-                    int x2=Form.getX(Form.fHandLabel);
-                    int y2=Form.getY(Form.fHandLabel);
+                    move();
 
-                    while(x1<=475&&y1<=300){        //移动图片
-                        x1+=7;
-                        y1+=7;
-                        x2+=7;
-                        y2+=7;
-                        Thread.sleep(100);
-                        Form.setXY(Form.orangeLabel1,x1,y1);
-                        Form.setXY(Form.fHandLabel,x2,y2);
-                    }
+                    Form.putFruit("爸爸","香蕉");
+                    System.out.println("爸爸放了一个香蕉");
 
-                    if(App.orangeCount==0){
-                        Form.orangeLabel3.setVisible(true);
-                    }
-                    else if(App.orangeCount==1){
-                        Form.orangeLabel4.setVisible(true);
-                    }
+                    int c = App.mContinue.availablePermits();
+                    App.mContinue.release(2-c);
 
-                    Form.orangeLabel1.setBounds(170,55,50,50);//橘子返回原位
-                    Form.fHandLabel.setBounds(100,20,70,70);//爸爸的手返回原位
-
-
-
-
-                    Form.putFruit("爸爸","橘子");
-
-                    App.mute.release();
+                    System.out.println(App.fContinue.availablePermits()+" "+App.mContinue.availablePermits());
+                    App.diskMutex.release();
                     App.haveOrange.release();
-
                     App.orangeCount=App.orangeCount+1;//橘子数加一
                 }
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    private void move() throws InterruptedException {
+        int x1=Form.getX(Form.bananaLabel1);
+        int y1=Form.getY(Form.bananaLabel1);
+        int x2=Form.getX(Form.fHandLabel);
+        int y2=Form.getY(Form.fHandLabel);
+
+        while(x1<=475&&y1<=300){        //移动图片
+            x1+=21;
+            y1+=21;
+            x2+=21;
+            y2+=21;
+            Thread.sleep(100);
+            Form.setXY(Form.bananaLabel1,x1,y1);
+            Form.setXY(Form.fHandLabel,x2,y2);
+        }
+
+        if(App.orangeCount==0){
+            Form.bananaLabel3.setVisible(true);
+        }
+        else if(App.orangeCount==1){
+            Form.bananaLabel4.setVisible(true);
+        }
+
+        Form.bananaLabel1.setBounds(170,55,
+                Form.banana.getIconWidth(),Form.banana.getIconHeight());//橘子返回原位
+        Form.fHandLabel.setBounds(100,20,
+                Form.motherHand.getIconWidth(),Form.motherHand.getIconHeight());//爸爸的手返回原位
     }
 }
