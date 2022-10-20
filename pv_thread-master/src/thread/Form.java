@@ -12,17 +12,17 @@ public class Form extends JFrame {
     public JScrollPane myScroll=new JScrollPane();
     public Graphics g=myPanel2.getGraphics();
 
-    public ImageIcon father=new ImageIcon("C:\\Users\\63111\\IdeaProjects\\PVFruit\\pv_thread-master\\src\\images\\father.png");
-    public ImageIcon mother=new ImageIcon("C:\\Users\\63111\\IdeaProjects\\PVFruit\\pv_thread-master\\src\\images\\mother.png");
-    public ImageIcon son=new ImageIcon("C:\\Users\\63111\\IdeaProjects\\PVFruit\\pv_thread-master\\src\\images\\son.png");
-    public ImageIcon daughter=new ImageIcon("C:\\Users\\63111\\IdeaProjects\\PVFruit\\pv_thread-master\\src\\images\\daughter.png");
-    public static ImageIcon fatherHand=new ImageIcon("C:\\Users\\63111\\IdeaProjects\\PVFruit\\pv_thread-master\\src\\images\\hand.png");
-    public static ImageIcon motherHand=new ImageIcon("C:\\Users\\63111\\IdeaProjects\\PVFruit\\pv_thread-master\\src\\images\\hand.png");
-    public static ImageIcon sonHand=new ImageIcon("C:\\Users\\63111\\IdeaProjects\\PVFruit\\pv_thread-master\\src\\images\\hand.png");
-    public static ImageIcon daughterHand=new ImageIcon("C:\\Users\\63111\\IdeaProjects\\PVFruit\\pv_thread-master\\src\\images\\hand.png");
-    public static ImageIcon plate=new ImageIcon("C:\\Users\\63111\\IdeaProjects\\PVFruit\\pv_thread-master\\src\\images\\plate.png");
-    public static ImageIcon ichigo =new ImageIcon("C:\\Users\\63111\\IdeaProjects\\PVFruit\\pv_thread-master\\src\\images\\ichogo.png");
-    public static ImageIcon banana =new ImageIcon("C:\\Users\\63111\\IdeaProjects\\PVFruit\\pv_thread-master\\src\\images\\banana.png");
+    public ImageIcon father=new ImageIcon("pv_thread-master/src/images/father.png");
+    public ImageIcon mother=new ImageIcon("pv_thread-master/src/images/mother.png");
+    public ImageIcon son=new ImageIcon("pv_thread-master/src/images/son.png");
+    public ImageIcon daughter=new ImageIcon("pv_thread-master/src/images/daughter.png");
+    public static ImageIcon fatherHand=new ImageIcon("pv_thread-master/src/images/hand.png");
+    public static ImageIcon motherHand=new ImageIcon("pv_thread-master/src/images/hand.png");
+    public static ImageIcon sonHand=new ImageIcon("pv_thread-master/src/images/hand.png");
+    public static ImageIcon daughterHand=new ImageIcon("pv_thread-master/src/images/hand.png");
+    public static ImageIcon plate=new ImageIcon("pv_thread-master/src/images/plate.png");
+    public static ImageIcon ichigo =new ImageIcon("pv_thread-master/src/images/ichogo.png");
+    public static ImageIcon banana =new ImageIcon("pv_thread-master/src/images/banana.png");
 
     public JLabel fatherLabel=new JLabel(father);
     public JLabel motherLabel=new JLabel(mother);
