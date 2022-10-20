@@ -21,7 +21,7 @@ public class Mother extends TimerTask {
 
                     App.diskMutex.release();
                     App.haveApple.release();
-                    App.appleCount=App.appleCount+1; //苹果数+1；
+                    App.ichigoCount =App.ichigoCount +1; //苹果数+1；
                 }
             }
         } catch (Exception e) {
@@ -44,10 +44,10 @@ public class Mother extends TimerTask {
             Form.setXY(Form.mHandLabel,x2,y2);
         }
 
-        if(App.appleCount==0){
+        if(App.ichigoCount ==0){
             Form.ichigoLabel3.setVisible(true);
         }
-        else if(App.appleCount==1){
+        else if(App.ichigoCount ==1){
             Form.ichigoLabel4.setVisible(true);
         }
 

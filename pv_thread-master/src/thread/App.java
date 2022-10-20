@@ -1,11 +1,7 @@
 package thread;
 
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Timer;
 import java.util.concurrent.Semaphore;
-import java.util.concurrent.locks.Lock;
-import java.util.concurrent.locks.ReentrantLock;
 
 public class App {
 
@@ -20,8 +16,8 @@ public class App {
     public static Semaphore fContinue = new Semaphore(2);
     public static Semaphore mContinue = new Semaphore(2);
 
-    public static int orangeCount=0;
-    public static int appleCount=0;
+    public static int bananaCount =0;
+    public static int ichigoCount =0;
 
     public static void main(String[] args) {
         Timer timer1=new Timer();

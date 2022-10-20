@@ -8,7 +8,7 @@ public class Daughter extends TimerTask {
         try {
             while (true) {
                 if(App.haveApple.tryAcquire()){
-                    App.appleCount--;
+                    App.ichigoCount--;
                     move();
 
                     App.diskEmpty.release();
@@ -31,9 +31,9 @@ public class Daughter extends TimerTask {
             Thread.sleep(100); //移动手
             Form.setXY(Form.dHandLabel,x2,y2);
         }
-        if(App.appleCount==1)
+        if(App.ichigoCount ==1)
             Form.ichigoLabel4.setVisible(false);
-        else if(App.appleCount==0)
+        else if(App.ichigoCount ==0)
             Form.ichigoLabel3.setVisible(false);
         x1=x2-50;
         y1=y2;

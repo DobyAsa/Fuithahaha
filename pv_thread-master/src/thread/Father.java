@@ -1,6 +1,5 @@
 package thread;
 
-import java.util.Timer;
 import java.util.TimerTask;
 
 public class Father extends TimerTask {
@@ -24,7 +23,7 @@ public class Father extends TimerTask {
                     System.out.println(App.fContinue.availablePermits()+" "+App.mContinue.availablePermits());
                     App.diskMutex.release();
                     App.haveOrange.release();
-                    App.orangeCount=App.orangeCount+1;//橘子数加一
+                    App.bananaCount =App.bananaCount +1;//香蕉数加一
                 }
             }
         } catch (Exception e) {
@@ -48,15 +47,15 @@ public class Father extends TimerTask {
             Form.setXY(Form.fHandLabel,x2,y2);
         }
 
-        if(App.orangeCount==0){
+        if(App.bananaCount ==0){
             Form.bananaLabel3.setVisible(true);
         }
-        else if(App.orangeCount==1){
+        else if(App.bananaCount ==1){
             Form.bananaLabel4.setVisible(true);
         }
 
         Form.bananaLabel1.setBounds(170,55,
-                Form.banana.getIconWidth(),Form.banana.getIconHeight());//橘子返回原位
+                Form.banana.getIconWidth(),Form.banana.getIconHeight());//香蕉返回原位
         Form.fHandLabel.setBounds(100,20,
                 Form.motherHand.getIconWidth(),Form.motherHand.getIconHeight());//爸爸的手返回原位
     }

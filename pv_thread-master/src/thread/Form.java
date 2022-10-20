@@ -5,22 +5,22 @@ import java.awt.*;
 
 public class Form extends JFrame {
     public JFrame myFrame=new JFrame("FruitSema"); //静态的窗口容器
-    public JPanel myPanel2=new JPanel();
+    public JPanel myPanel =new JPanel();
     public Container myContainer=myFrame.getContentPane();
     public JScrollPane myScroll=new JScrollPane();
-    public Graphics g=myPanel2.getGraphics();
+    public Graphics g= myPanel.getGraphics();
 
-    public ImageIcon father=new ImageIcon("pv_thread-master/src/images/father.png");
-    public ImageIcon mother=new ImageIcon("pv_thread-master/src/images/mother.png");
-    public ImageIcon son=new ImageIcon("pv_thread-master/src/images/son.png");
-    public ImageIcon daughter=new ImageIcon("pv_thread-master/src/images/daughter.png");
-    public static ImageIcon fatherHand=new ImageIcon("pv_thread-master/src/images/hand.png");
-    public static ImageIcon motherHand=new ImageIcon("pv_thread-master/src/images/hand.png");
-    public static ImageIcon sonHand=new ImageIcon("pv_thread-master/src/images/hand.png");
-    public static ImageIcon daughterHand=new ImageIcon("pv_thread-master/src/images/hand.png");
-    public static ImageIcon plate=new ImageIcon("pv_thread-master/src/images/plate.png");
-    public static ImageIcon ichigo =new ImageIcon("pv_thread-master/src/images/ichogo.png");
-    public static ImageIcon banana =new ImageIcon("pv_thread-master/src/images/banana.png");
+    public ImageIcon father=new ImageIcon(new ImageIcon("pv_thread-master/src/images/father.png").getImage().getScaledInstance(100, 100, Image.SCALE_DEFAULT));
+    public ImageIcon mother=new ImageIcon(new ImageIcon("pv_thread-master/src/images/mother.png").getImage().getScaledInstance(100, 100, Image.SCALE_DEFAULT));
+    public ImageIcon son=new ImageIcon(new ImageIcon("pv_thread-master/src/images/son.png").getImage().getScaledInstance(100, 100, Image.SCALE_DEFAULT));
+    public ImageIcon daughter=new ImageIcon(new ImageIcon("pv_thread-master/src/images/daughter.png").getImage().getScaledInstance(100, 100, Image.SCALE_DEFAULT));
+    public static ImageIcon fatherHand=new ImageIcon(new ImageIcon("pv_thread-master/src/images/hand.png").getImage().getScaledInstance(50, 50, Image.SCALE_DEFAULT));
+    public static ImageIcon motherHand=fatherHand;
+    public static ImageIcon sonHand=fatherHand;
+    public static ImageIcon daughterHand=fatherHand;
+    public static ImageIcon plate=new ImageIcon(new ImageIcon("pv_thread-master/src/images/plate.png").getImage().getScaledInstance(300, 300, Image.SCALE_DEFAULT));
+    public static ImageIcon ichigo =new ImageIcon(new ImageIcon("pv_thread-master/src/images/ichogo.png").getImage().getScaledInstance(70, 70, Image.SCALE_DEFAULT));
+    public static ImageIcon banana =new ImageIcon(new ImageIcon("pv_thread-master/src/images/banana.png").getImage().getScaledInstance(100, 100, Image.SCALE_DEFAULT));
 
     public JLabel fatherLabel=new JLabel(father);
     public JLabel motherLabel=new JLabel(mother);
@@ -55,18 +55,18 @@ public class Form extends JFrame {
 
     public void Init(){
         myFrame.setLayout(null);
-        myPanel2.setLayout(null);
+        myPanel.setLayout(null);
         myContainer.setLayout(null);
 
         myFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         myFrame.setSize(1000,800);
-        myPanel2.setBounds(0,0,1200,800);
+        myPanel.setBounds(0,0,1200,800);
         fatherLabel.setBounds(0,0,father.getIconWidth(),father.getIconHeight());
         motherLabel.setBounds(850,0,mother.getIconWidth(),mother.getIconHeight());
-        sonLabel.setBounds(20,800-son.getIconHeight(),son.getIconWidth(),son.getIconHeight());
-        daughterLabel.setBounds(850,800-daughter.getIconHeight(),daughter.getIconWidth(),daughter.getIconHeight());
-        plateLabel.setBounds(375,325,plate.getIconWidth(),plate.getIconHeight());
+        sonLabel.setBounds(20,700-son.getIconHeight(),son.getIconWidth(),son.getIconHeight());
+        daughterLabel.setBounds(850,700-daughter.getIconHeight(),daughter.getIconWidth(),daughter.getIconHeight());
+        plateLabel.setBounds(300-plateLabel.getWidth(),200-plateLabel.getHeight(),plate.getIconWidth(),plate.getIconHeight());
         fHandLabel.setBounds(100,20,motherHand.getIconWidth(),motherHand.getIconHeight());
         mHandLabel.setBounds(800,20,motherHand.getIconWidth(),motherHand.getIconHeight());
         sHandLabel.setBounds(100,660,motherHand.getIconWidth(),motherHand.getIconHeight());
@@ -80,25 +80,25 @@ public class Form extends JFrame {
         bananaLabel3.setBounds(375,300,banana.getIconWidth(),banana.getIconHeight());
         bananaLabel4.setBounds(425,300,banana.getIconWidth(),banana.getIconHeight());
 
-        myPanel2.add(motherLabel);
-        myPanel2.add(fatherLabel);
-        myPanel2.add(sonLabel);
-        myPanel2.add(daughterLabel);
-        myPanel2.add(plateLabel);
-        myPanel2.add(fHandLabel);
-        myPanel2.add(mHandLabel);
-        myPanel2.add(sHandLabel);
-        myPanel2.add(dHandLabel);
-        myPanel2.add(ichigoLabel1);
-        myPanel2.add(ichigoLabel2);
-        myPanel2.add(ichigoLabel3);
-        myPanel2.add(ichigoLabel4);
-        myPanel2.add(bananaLabel1);
-        myPanel2.add(bananaLabel2);
-        myPanel2.add(bananaLabel3);
-        myPanel2.add(bananaLabel4);
+        myPanel.add(motherLabel);
+        myPanel.add(fatherLabel);
+        myPanel.add(sonLabel);
+        myPanel.add(daughterLabel);
+        myPanel.add(plateLabel);
+        myPanel.add(fHandLabel);
+        myPanel.add(mHandLabel);
+        myPanel.add(sHandLabel);
+        myPanel.add(dHandLabel);
+        myPanel.add(ichigoLabel1);
+        myPanel.add(ichigoLabel2);
+        myPanel.add(ichigoLabel3);
+        myPanel.add(ichigoLabel4);
+        myPanel.add(bananaLabel1);
+        myPanel.add(bananaLabel2);
+        myPanel.add(bananaLabel3);
+        myPanel.add(bananaLabel4);
 
-        myContainer.add(myPanel2);
+        myContainer.add(myPanel);
         myFrame.add(myScroll);
 
         myFrame.setVisible(true);

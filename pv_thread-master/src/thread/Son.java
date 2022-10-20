@@ -8,7 +8,7 @@ public class Son extends TimerTask {
         try {
             while (true) {
                 if(App.haveOrange.tryAcquire()){
-                    App.orangeCount--;
+                    App.bananaCount--;
                     move();
                     App.diskEmpty.release();
                 }
@@ -30,9 +30,9 @@ public class Son extends TimerTask {
             Thread.sleep(100); //移动手
             Form.setXY(Form.sHandLabel,x2,y2);
         }
-        if(App.orangeCount==1)
+        if(App.bananaCount ==1)
             Form.bananaLabel4.setVisible(false);
-        else if(App.orangeCount==0)
+        else if(App.bananaCount ==0)
             Form.bananaLabel3.setVisible(false);
         x1=x2+75;
         y1=y2;
