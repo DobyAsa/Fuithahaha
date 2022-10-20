@@ -34,7 +34,7 @@ public class Son extends TimerTask {
             Form.bananaLabel4.setVisible(false);
         else if(App.bananaCount ==0)
             Form.bananaLabel3.setVisible(false);
-        x1=x2+75;
+        x1=x2+10;
         y1=y2;
         Form.bananaLabel2.setLocation(x1,y1); //把橘子放在手旁边
         Form.bananaLabel2.setVisible(true);

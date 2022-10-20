@@ -54,7 +54,7 @@ public class Father extends TimerTask {
             Form.bananaLabel4.setVisible(true);
         }
 
-        Form.bananaLabel1.setBounds(170,55,
+        Form.bananaLabel1.setBounds(120,30,
                 Form.banana.getIconWidth(),Form.banana.getIconHeight());//香蕉返回原位
         Form.fHandLabel.setBounds(100,20,
                 Form.motherHand.getIconWidth(),Form.motherHand.getIconHeight());//爸爸的手返回原位

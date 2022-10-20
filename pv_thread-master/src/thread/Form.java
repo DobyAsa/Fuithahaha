@@ -75,7 +75,7 @@ public class Form extends JFrame {
         ichigoLabel2.setBounds(750,635,ichigo.getIconWidth(),ichigo.getIconHeight());//右下角
         ichigoLabel3.setBounds(475,300,ichigo.getIconWidth(),ichigo.getIconHeight());//中间靠左
         ichigoLabel4.setBounds(525,300,ichigo.getIconWidth(),ichigo.getIconHeight());//中间靠右
-        bananaLabel1.setBounds(170,55,banana.getIconWidth(),banana.getIconHeight());
+        bananaLabel1.setBounds(120,30,banana.getIconWidth(),banana.getIconHeight());
         bananaLabel2.setBounds(170,635,banana.getIconWidth(),banana.getIconHeight());
         bananaLabel3.setBounds(375,300,banana.getIconWidth(),banana.getIconHeight());
         bananaLabel4.setBounds(425,300,banana.getIconWidth(),banana.getIconHeight());
