@@ -20,8 +20,8 @@ public class Mother extends TimerTask {
                     System.out.println(App.fContinue.availablePermits()+" "+App.mContinue.availablePermits());
 
                     App.diskMutex.release();
-                    App.haveApple.release();
-                    App.ichigoCount =App.ichigoCount +1; //苹果数+1；
+                    App.haveIchigo.release();
+                    App.ichigoCount =App.ichigoCount +1;
                 }
             }
         } catch (Exception e) {

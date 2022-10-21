@@ -7,7 +7,7 @@ public class Son extends TimerTask {
     public void run() {
         try {
             while (true) {
-                if(App.haveOrange.tryAcquire()){
+                if(App.haveBanana.tryAcquire()){
                     App.bananaCount--;
                     move();
                     App.diskEmpty.release();
@@ -20,7 +20,7 @@ public class Son extends TimerTask {
     }
 
     public void move() throws InterruptedException {
-        int x1=Form.getX(Form.bananaLabel2);//记录橘子的坐标
+        int x1=Form.getX(Form.bananaLabel2);
         int y1=Form.getY(Form.bananaLabel2);
         int x2=Form.getX(Form.sHandLabel);
         int y2=Form.getY(Form.sHandLabel);
@@ -36,7 +36,7 @@ public class Son extends TimerTask {
             Form.bananaLabel3.setVisible(false);
         x1=x2+10;
         y1=y2;
-        Form.bananaLabel2.setLocation(x1,y1); //把橘子放在手旁边
+        Form.bananaLabel2.setLocation(x1,y1);
         Form.bananaLabel2.setVisible(true);
         while(x2>=100&&y2<=660){
             x2-=21;

@@ -7,7 +7,7 @@ public class Daughter extends TimerTask {
     public void run() {
         try {
             while (true) {
-                if(App.haveApple.tryAcquire()){
+                if(App.haveIchigo.tryAcquire()){
                     App.ichigoCount--;
                     move();
 
@@ -21,7 +21,7 @@ public class Daughter extends TimerTask {
     }
 
     public void move() throws InterruptedException {
-        int x1=Form.getX(Form.ichigoLabel2);//记录苹果的坐标
+        int x1=Form.getX(Form.ichigoLabel2);
         int y1=Form.getY(Form.ichigoLabel2);
         int x2=Form.getX(Form.dHandLabel);
         int y2=Form.getY(Form.dHandLabel);
@@ -37,7 +37,7 @@ public class Daughter extends TimerTask {
             Form.ichigoLabel3.setVisible(false);
         x1=x2-50;
         y1=y2;
-        Form.ichigoLabel2.setLocation(x1,y1); //把橘子放在手旁边
+        Form.ichigoLabel2.setLocation(x1,y1);
         Form.ichigoLabel2.setVisible(true);
         while(x2<=800&&y2<=660){
             x2+=21;

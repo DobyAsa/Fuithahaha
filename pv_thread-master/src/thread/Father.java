@@ -22,7 +22,7 @@ public class Father extends TimerTask {
 
                     System.out.println(App.fContinue.availablePermits()+" "+App.mContinue.availablePermits());
                     App.diskMutex.release();
-                    App.haveOrange.release();
+                    App.haveBanana.release();
                     App.bananaCount =App.bananaCount +1;//香蕉数加一
                 }
             }
